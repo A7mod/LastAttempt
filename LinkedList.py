@@ -15,7 +15,7 @@ class LinkedList:
     # to append element at the end of the Linked List    
     def append(self, data):
         new_node = Node(data)
-
+    #how about that
         if self.head is None:
             self.head = new_node
             return
