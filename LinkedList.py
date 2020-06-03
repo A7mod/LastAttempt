@@ -39,15 +39,42 @@ class LinkedList:
         new_node.next = prev.next
         prev.next = new_node     
 
+
+    def delete_node(self, key):   #method for deleting the nodes: case1 & case2
+
+        # case1 : where we're to delete the head node of the list. 
+        cur = self.head
+
+        if cur and cur.data == key:   # key gives which node to delete
+            self.head = cur.next      # setting node to next element in the list
+            cur = None                # for getting rid of the removed head and making way for the next element to become head.
+            return
+        
+        # case2 : where we have to delete a 'non-head' node in the linked list.
+        previous = None                
+        while cur and cur.data != key:   # procedure to find the element to be deleted
+            previous = cur
+            cur = cur.next
+
+        if cur is None:                  # if element to be deleted is not in the list
+            return
+
+        previous.next = cur.next         # when element is found 
+        cur = None                       # this removes the element  
+
+
+
 llist = LinkedList()
 llist.append("A")              
 llist.append("B")
 llist.append("C")
 llist.append("D") # added elements using the append function only
 
-llist.insert_after(llist.head.next, "E") 
+##llist.insert_after(llist.head.next, "E") 
 # llist.head.next is used here to point out the data element present just "next" to the head of the list.
 
 # llist.prepend("E") # prepend example 
+
+llist.delete_node("B")   # case2 when deletion of some element takes place which is not the head.
 
 llist.print_list()
