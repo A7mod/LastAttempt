@@ -62,6 +62,30 @@ class LinkedList:
         previous.next = cur.next         # when element is found 
         cur = None                       # this removes the element  
 
+    """
+    def delete_at_position(self, pos):    # this method is for when there's a specific position in the list whose element needs to be deleted
+
+        cur = self.head                  
+
+        if pos == 0:                  # checking for the position to be head
+            self.head = cur.next      
+            cur = None
+            return
+
+        previous = None               # checking for any other position 
+        count = 1                     # variable to keep track of the position in the loop
+        while cur and count != pos:
+            previous = cur
+            cur = cur.next
+            count += 1
+
+        if cur is None:               # when position exceeds the available positions
+            return
+
+        previous.next = cur.next
+        cur = None   
+    """
+
 
 
 llist = LinkedList()
