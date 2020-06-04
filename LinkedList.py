@@ -100,7 +100,7 @@ class LinkedList:
         if node is None:
             return 0
         return 1 + self.length_recursive(node.next)
-                    
+
 
 
 
@@ -110,7 +110,11 @@ llist.append("B")
 llist.append("C")
 llist.append("D") # added elements using the append function only
 
-##llist.insert_after(llist.head.next, "E") 
+print(llist.length())
+print(llist.length_recursive(llist.head))
+
+
+#llist.insert_after(llist.head.next, "E") 
 # llist.head.next is used here to point out the data element present just "next" to the head of the list.
 
 # llist.prepend("E") # prepend example 
