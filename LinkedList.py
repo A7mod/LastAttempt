@@ -85,6 +85,22 @@ class LinkedList:
         previous.next = cur.next
         cur = None   
     """
+    def length(self):
+        
+        count = 0
+        cur = self.head
+
+        while cur:
+            count += 1
+            cur = cur.next
+        return count
+
+    def length_recursive(self, node):
+
+        if node is None:
+            return 0
+        return 1 + self.length_recursive(node.next)
+                    
 
 
 
