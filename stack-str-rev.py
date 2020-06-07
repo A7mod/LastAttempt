@@ -1,4 +1,4 @@
-class stack():
+class Stack():
     def __init__(self):
         self.items = []
 
@@ -17,4 +17,21 @@ class stack():
 
     def get_stack(self):
         return self.items
+
+def string_reverse(stack, input_str):
+    for i in range(len(input_str)):
+        stack.push(input_str[i])
+
+    reversed_string = ""
+    while not stack.is_empty():
+        reversed_string += stack.pop()
+
+    return reversed_string
+
+stack = Stack()
+input_str = "Hello there"
+
+print(string_reverse(stack, input_str))
+
+#print(input_str[::-1])
 
