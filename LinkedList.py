@@ -119,11 +119,19 @@ class LinkedList:
 
         if not curr_1 or not curr_2:
             return
-            
 
+        if prev_1:
+            prev_1.next = curr_2
+        else:
+            self.head = curr_2 
 
+        if prev_2:
+            prev_2.next = curr_1
+        else:
+            self.head = curr_1
 
-        
+        curr_1.next, curr_2.next = curr_2.next, curr_1.next
+ 
 
 llist = LinkedList()
 llist.append("A")              
@@ -131,6 +139,9 @@ llist.append("B")
 llist.append("C")
 llist.append("D") # added elements using the append function only
 
+llist.swap_nodes("B", "C")
+
+llist.print_list()
 #print(llist.length())
 #print(llist.length_recursive(llist.head))
 
@@ -140,6 +151,6 @@ llist.append("D") # added elements using the append function only
 
 # llist.prepend("E") # prepend example 
 
-llist.delete_node("B")   # case2 when deletion of some element takes place which is not the head.
+##llist.delete_node("B")   # case2 when deletion of some element takes place which is not the head.
 
-llist.print_list()
+
