@@ -156,6 +156,18 @@ class LinkedList:
             cur = nxt
         self.head = prev 
 
+    def reverse_recursive(self):
+        def reverse_recursive(cur, prev):
+            if not cur:
+                return prev
+
+            nxt = cur.next
+            cur.next = prev
+            prev = cur
+            cur = nxt
+            return reverse_recursive(cur, prev)
+
+        self.head = reverse_recursive(cur = self.head, prev = None)        
 
 
 llist = LinkedList()
@@ -166,7 +178,9 @@ llist.append("D")
 llist.append("E") # added elements using the append function only
 
 
-llist.reverse_loop()
+#llist.reverse_loop()
+
+llist.reverse_recursive()
 
 #llist.swap_nodes("B", "C")
 
