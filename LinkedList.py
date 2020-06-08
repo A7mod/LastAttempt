@@ -138,14 +138,35 @@ class LinkedList:
             print(name + ": None")    
         else:
             print(name + ":" + node.data)
-     
-     
-        
+
+    def reverse_loop(self):
+
+        prev = None
+        cur = self.head
+        while cur:
+            nxt = cur.next
+            cur.next = prev
+
+            self.print_help(prev, "PREV")
+            self.print_help(cur, "CUR")
+            self.print_help(nxt, "NXT")
+            print("\n")
+
+            prev = cur
+            cur = nxt
+        self.head = prev 
+
+
+
 llist = LinkedList()
 llist.append("A")              
 llist.append("B")
 llist.append("C")
-llist.append("D") # added elements using the append function only
+llist.append("D")
+llist.append("E") # added elements using the append function only
+
+
+llist.reverse_loop()
 
 #llist.swap_nodes("B", "C")
 
