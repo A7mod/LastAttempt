@@ -131,15 +131,23 @@ class LinkedList:
             self.head = curr_1
 
         curr_1.next, curr_2.next = curr_2.next, curr_1.next
- 
-    
+
+
+    def print_help(self, node, name):
+        if node is None:
+            print(name + ": None")    
+        else:
+            print(name + ":" + node.data)
+     
+     
+        
 llist = LinkedList()
 llist.append("A")              
 llist.append("B")
 llist.append("C")
 llist.append("D") # added elements using the append function only
 
-llist.swap_nodes("B", "C")
+#llist.swap_nodes("B", "C")
 
 llist.print_list()
 
