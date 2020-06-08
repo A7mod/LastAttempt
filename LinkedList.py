@@ -123,7 +123,7 @@ class LinkedList:
         if prev_1:
             prev_1.next = curr_2
         else:
-            self.head = curr_2 
+            self.head = curr_2
 
         if prev_2:
             prev_2.next = curr_1
@@ -132,7 +132,7 @@ class LinkedList:
 
         curr_1.next, curr_2.next = curr_2.next, curr_1.next
  
-
+    
 llist = LinkedList()
 llist.append("A")              
 llist.append("B")
@@ -142,9 +142,9 @@ llist.append("D") # added elements using the append function only
 llist.swap_nodes("B", "C")
 
 llist.print_list()
+
 #print(llist.length())
 #print(llist.length_recursive(llist.head))
-
 
 #llist.insert_after(llist.head.next, "E") 
 # llist.head.next is used here to point out the data element present just "next" to the head of the list.
@@ -152,5 +152,3 @@ llist.print_list()
 # llist.prepend("E") # prepend example 
 
 ##llist.delete_node("B")   # case2 when deletion of some element takes place which is not the head.
-
-
