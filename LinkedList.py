@@ -133,13 +133,13 @@ class LinkedList:
         curr_1.next, curr_2.next = curr_2.next, curr_1.next
 
 
-    def print_help(self, node, name):
+    def print_help(self, node, name):       # method to print the working of the reversal
         if node is None:
             print(name + ": None")    
         else:
             print(name + ":" + node.data)
 
-    def reverse_loop(self):
+    def reverse_loop(self):                 #iterative way of doing it with method for reversal
 
         prev = None
         cur = self.head
@@ -147,10 +147,10 @@ class LinkedList:
             nxt = cur.next
             cur.next = prev
 
-            self.print_help(prev, "PREV")
+            self.print_help(prev, "PREV")    
             self.print_help(cur, "CUR")
-            self.print_help(nxt, "NXT")
-            print("\n")
+            self.print_help(nxt, "NXT")      
+            print("\n")                    # these are from the helper method to see the working of the stuff that's happening
 
             prev = cur
             cur = nxt
