@@ -8,6 +8,15 @@ class BinaryTree(object):
     def __init__(self, root):     #defining constructor
         self.root = Node(root)
 
+    def preorder_print(self, start, traversal):     #preorder traversal module
+        """ ORDER : Root -> Left -> Right """
+        if start:
+            traversal += (str(start.value) + ".")
+            traversal = self.preorder_print(start.left, traversal)
+            traversal = self.preorder_print(start.right, traversal)
+        return traversal    
+
+
 
 #             1
 #           /   \
