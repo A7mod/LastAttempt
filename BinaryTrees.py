@@ -11,6 +11,7 @@ class BinaryTree(object):
     def print_tree(self, traversal_type):
         if traversal_type == "preorder":
             return self.preorder_print(tree.root, "")
+            
         else:
             print("Traversal type" + str(traversal_type) + "is not supported.")
             return False    
@@ -24,7 +25,13 @@ class BinaryTree(object):
             traversal = self.preorder_print(start.right, traversal)
         return traversal    
 
-
+    def inorder_print(self, start, traversal):
+        """ ORDER : Left -> Root -> Right """
+        if start:
+            traversal = self.inorder_print(start.left, traversal)
+            traversal += (str(start.value) + "-")
+            traversal = self.inorder_print(start.right, traversal)
+        return traversal        
 
 #             1
 #           /   \
