@@ -39,6 +39,9 @@ class BinaryTree(object):
             return self.inorder_print(tree.root, "")
         elif traversal_type == "postorder":
             return self.postorder_print(tree.root, "")
+        elif traversal_type == "levelorder":
+            return self.levelorder_print(tree.root)
+
         else:
             print("Traversal type" + str(traversal_type) + "is not supported.")
             return False    
