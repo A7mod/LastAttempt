@@ -45,6 +45,7 @@ class BinaryTree(object):
              
 #1-2-3-4-5-6-7-   (preorder traversal)
 #4-2-5-1-6-3-7-   (inorder traversal)
+#4-2-5-6-3-7-1-   (postorder traversal)
 
 #             1
 #           /   \
