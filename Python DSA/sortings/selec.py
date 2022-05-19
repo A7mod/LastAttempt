@@ -11,7 +11,9 @@ def selection_sort(arr):
             arr[i], arr[min] = arr[min], arr[i]        
 
     
-#selection sort can be done in two ways apparantly. In 
+#selection sort can be done in two ways apparantly. In both cases, we take a min element and assign it to any element of array "i". 
+#the other case is where we make a separate method for finding smallest element. 
+#here we have used just one method and merged it into one.
 
 if __name__ == "__main__":
     elements = [5,9,2,1,76,88,-12,-45,51,0]
