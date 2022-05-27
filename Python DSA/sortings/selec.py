@@ -16,7 +16,7 @@ def selection_sort(arr):
 #here we have used just one method and merged it into one.
 
 if __name__ == "__main__":
-    elements = [5,9,2,1,76,88,-12,-45,51,0]
+    elements = [0,23,-728,5,9,2,1,76,88,-12,-45,51,0]
 
     selection_sort(elements)
     print(elements)
